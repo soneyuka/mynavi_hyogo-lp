@@ -58,6 +58,7 @@ ul {
 
 .heading3 {
     font-size: clamp(20px, 4vw, 28px);
+    line-height: 1.8;
 }
 
 .img-box img {
