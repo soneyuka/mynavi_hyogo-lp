@@ -259,7 +259,7 @@ img {
 .label-area {
     display: inline-block;
     line-height: 1;
-    font-size: clamp(1.15rem, 2vw, 1.25rem);
+    font-size: clamp(1.15rem, 2vw, 1.35rem);
     padding: 1rem;
     border: 2px solid currentColor;
     border-radius: 0.6rem;
