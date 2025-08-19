@@ -2,7 +2,7 @@
 document.querySelectorAll(".job_slider").forEach((slider) => {
   new Splide(slider, {
     autoplay: false,
-    type: "slide",
+    type: "loop",
     pauseOnHover: false,
     pauseOnFocus: false,
     interval: 2000,
@@ -13,18 +13,13 @@ document.querySelectorAll(".job_slider").forEach((slider) => {
     breakpoints: {
       640: {
         perPage: 1,
-        fixedWidth: '90%',
-        padding: {
-          right: '10%',
-        },
+        padding: "10%",
+        gap: 16,
       },
       1023: {
         perPage: 2,
         destroy: false,
-                fixedWidth: '50%',
-        padding: {
-          right: '10%',
-        },
+        gap: 24,
       },
     },
   }).mount();
@@ -46,4 +41,21 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   elements.forEach(el => observer.observe(el));
+});
+
+  // 追従ボタン
+document.addEventListener('DOMContentLoaded', () => {
+  const fixedButton = document.getElementById('fixedCv');
+  
+  const showButtonAt = window.innerHeight * 3;
+
+  window.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY;
+
+    if (scrollPosition > showButtonAt) {
+      fixedButton.classList.remove('hidden');
+    } else {
+      fixedButton.classList.add('hidden');
+    }
+  });
 });
