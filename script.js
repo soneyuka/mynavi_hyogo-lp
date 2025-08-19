@@ -46,16 +46,18 @@ document.addEventListener("DOMContentLoaded", () => {
   // 追従ボタン
 document.addEventListener('DOMContentLoaded', () => {
   const fixedButton = document.getElementById('fixedCv');
-  
   const showButtonAt = window.innerHeight * 3;
 
   window.addEventListener('scroll', () => {
     const scrollPosition = window.scrollY;
 
+    // スクロール量が基準を超えたら、opacityとpointer-eventsを変更
     if (scrollPosition > showButtonAt) {
-      fixedButton.classList.remove('hidden');
+      fixedButton.style.opacity = '1';
+      fixedButton.style.pointerEvents = 'auto';
     } else {
-      fixedButton.classList.add('hidden');
+      fixedButton.style.opacity = '0';
+      fixedButton.style.pointerEvents = 'none';
     }
   });
 });

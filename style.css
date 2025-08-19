@@ -1300,9 +1300,8 @@ section.cv::before {
     z-index: 1000;
     /* 他の要素より前面に表示 */
     transition: opacity 0.5s ease-in-out;
-    /* スムーズな表示・非表示 */
-    opacity: 1;
-    /* 初期状態では表示させておく */
+  opacity: 0;
+  pointer-events: none;
 }
 
 .fixed-cv .cv_button {
