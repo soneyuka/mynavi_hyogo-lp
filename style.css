@@ -387,8 +387,22 @@ div.menu {
     padding: 3rem 0;
 }
 
+.menu_item-title-wrap {
+    display: flex;
+    gap: .8rem;
+    align-items: center;
+}
+
 .menu_item-title {
     font-size: 1.2rem;
+}
+
+.menu_item-title-label {
+    display: inline-block;
+    background: url(images/label-ribon.svg) no-repeat center center / 100% 100%;
+    color: #fff;
+    padding: .2em .8em .3em;
+    font-size: .8rem;
 }
 
 .menu nav ul {
