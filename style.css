@@ -1219,24 +1219,24 @@ section.cv::before {
 
 .cv_img-woman1 {
     position: absolute;
-    left: -10%;
+    left: -20%;
     top: 0;
     height: 45%;
-    width: auto;
+    width: 45%;
 }
 
 .cv_img-woman2 {
     position: absolute;
-    right: -10%;
+    right: -15%;
     top: 5%;
     height: 40%;
-    width: auto;
+    width: 40%;
 }
 
 .cv_img-woman1 img,
 .cv_img-woman2 img {
     height: 100%;
-    width: auto;
+    width: 100%;
     object-fit: contain;
 }
 
@@ -1259,12 +1259,12 @@ section.cv::before {
 
     .cv_img-woman1 {
         height: 60%;
-        left: 0;
+        left: -20%;
     }
 
     .cv_img-woman2 {
         height: 55%;
-        right: 0;
+        right: -20%;
     }
 }
 
