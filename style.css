@@ -517,6 +517,12 @@ section.map {
     left: 20%;
 }
 
+@media (max-width: 639px) {
+    .map .button-area {
+        padding: .8rem;
+    }
+}
+
 @media (min-width: 640px) {
     .map .button-area.color-kobe {
         bottom: 10%;
@@ -544,11 +550,21 @@ section.map {
     }
 }
 
-@media (max-width: 639px) {
-    .map .button-area {
-        padding: .8rem;
+@media (min-width: 1024px) {
+
+    .map-container::before {
+        left: -12.5vw;
+        top: 10%;
+    }
+
+    .map-container::after {
+        right: -15vw;
+        bottom: 20%;
     }
 }
+
+
+
 
 /* area */
 
@@ -800,7 +816,7 @@ section.area::before {
     padding: .6rem 1.4rem 2rem;
     color: #579ED7;
     width: auto;
-    min-height: 5rem;
+    min-height: 5.6rem;
 }
 
 .job_item-balloon p {
@@ -908,18 +924,9 @@ section.area::before {
 
 @media (min-width: 640px) {
 
-    .area_akashi .job_item-list,
-    .area_itami .job_item-list {
-        min-height: 10.7rem;
-    }
-
     .area_ashiya .job_item-list,
     .area_kobe .job_item-list {
         min-height: 12rem;
-    }
-
-    .area_himeji .job_item-list {
-        min-height: 16rem;
     }
 }
 
@@ -933,6 +940,10 @@ section.area::before {
 
     .area_ashiya .job_item-list {
         min-height: 10.7rem;
+    }
+
+    .area_himeji .job_item-list {
+        min-height: 16rem;
     }
 }
 
@@ -995,10 +1006,10 @@ section.holiday::after {
     content: '';
     position: absolute;
     right: 5%;
-    bottom: -17.5%;
+    bottom: -20vw;
     background: url(images/deco2.svg) no-repeat top center / contain;
     width: 195px;
-    max-width: 30vw;
+    max-width: 25vw;
     height: 15vw;
 }
 
@@ -1040,6 +1051,11 @@ section.holiday::after {
     section.holiday {
         padding: 9rem 0 12rem;
     }
+
+    .holiday_text-wrap::after {
+        right: -5%;
+        bottom: -20%;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -1061,11 +1077,6 @@ section.holiday::after {
         right: 0;
         max-width: 12vw;
         height: auto;
-    }
-
-    .holiday_text-wrap::after {
-        right: -5%;
-        bottom: -20%;
     }
 
     .holiday_text-wrap::before {
@@ -1300,8 +1311,9 @@ section.cv::before {
     z-index: 1000;
     /* 他の要素より前面に表示 */
     transition: opacity 0.5s ease-in-out;
-  opacity: 0;
-  pointer-events: none;
+    /* スムーズな表示・非表示 */
+    opacity: 1;
+    /* 初期状態では表示させておく */
 }
 
 .fixed-cv .cv_button {
