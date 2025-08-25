@@ -2,24 +2,29 @@
 document.querySelectorAll(".job_slider").forEach((slider) => {
   new Splide(slider, {
     autoplay: false,
-    type: "loop",
+    type: "slide",
     pauseOnHover: false,
     pauseOnFocus: false,
     interval: 2000,
-    speed: 1000,
+    speed: 800,
     perPage: 3,
     destroy: true,
-    gap: 16,
+    gap: 8,
     breakpoints: {
       640: {
         perPage: 1,
-        padding: "10%",
-        gap: 16,
+        fixedWidth: '95%',
+        padding: {
+          right: '5%',
+        },
       },
       1023: {
         perPage: 2,
         destroy: false,
-        gap: 24,
+        fixedWidth: '50%',
+        padding: {
+          right: '10%',
+        },
       },
     },
   }).mount();

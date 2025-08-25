@@ -413,11 +413,10 @@ div.menu {
 }
 
 .button-area {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 4px;
-    padding: 1rem .8rem;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    padding: 1rem 2rem 1rem .8rem;
     background: #fff;
     border: 2px solid currentColor;
     line-height: 1;
@@ -429,6 +428,11 @@ div.menu {
     width: .8rem;
     clip-path: polygon(0 0, 100% 0, 50% 100%);
     background: currentColor;
+    position: absolute;
+    right: .8rem;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
 }
 
 .button-area:hover {
@@ -503,7 +507,7 @@ section.map {
     font-size: clamp(.8rem, 2vw, 18px);
     text-align: center;
     white-space: nowrap;
-    padding: 1rem;
+    padding: 1rem 2rem 1rem 1rem;
 }
 
 .map .button-area.color-kobe {
@@ -808,6 +812,10 @@ section.area::before {
     height: 3rem;
 }
 
+.job .splide__arrow:disabled {
+    opacity: 0;
+}
+
 .job .splide__arrow:not(:disabled) {
     opacity: 1;
 }
@@ -926,13 +934,16 @@ section.area::before {
     }
 
     .job.inner {
-        padding: 0;
+        padding-right: 0;
     }
 
     .job_container {
-        padding-left: 0;
         padding-right: 0;
-        border-radius: 1.5rem;
+        border-radius: 1.5rem 0 0 1.5rem;
+    }
+
+    .job .splide__arrow--prev {
+        left: -1.5rem;
     }
 }
 
